@@ -1,0 +1,17 @@
+.app {
+  margin: 0 auto;
+  width: 30%;
+}
+
+.app h1 {
+  margin-bottom: 5px;
+}
+
+.app h2 {
+  margin: 0;
+}
+
+.app button {
+  padding: 5px 10px;
+  border-radius: 3px;
+}

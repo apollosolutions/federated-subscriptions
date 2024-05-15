@@ -1,0 +1,16 @@
+.review .review-body {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 35px;
+}
+
+.review .customer {
+  margin: 0 auto;
+  margin-top: 15px;
+  line-height: 20px;
+  width: 60%;
+}
+
+.review small {
+  font-size: 10px;
+}

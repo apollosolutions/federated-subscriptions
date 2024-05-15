@@ -1,0 +1,22 @@
+{
+  "name": "subgraph-users",
+  "version": "0.1.0",
+  "description": "",
+  "main": "users.js",
+  "type": "module",
+  "scripts": {
+    "start": "node users.js"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.5.0",
+    "@apollo/subgraph": "2.4.0",
+    "graphql": "16.6.0",
+    "graphql-tag": "^2.12.6"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
