@@ -1,4 +1,7 @@
 # Federated Subscriptions
+
+This repository provides a consolidation of examples and references for implementing federated subscriptions.
+
 ```
 federated-subscriptions/
 │

@@ -1,0 +1,23 @@
+cors:
+  allow_any_origin: true
+supergraph:
+  listen: 0.0.0.0:8080
+  introspection: true
+
+sandbox:
+  enabled: true
+homepage:
+  enabled: false
+include_subgraph_errors:
+  all: true # Propagate errors from all subraphs
+telemetry:
+  metrics:
+    prometheus:
+      enabled: true
+subscription:
+  mode:
+    passthrough:
+      # docker setup, for local setup comment out the following section
+      subgraphs:
+        reviews:
+          path: /
