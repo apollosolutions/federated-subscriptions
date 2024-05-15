@@ -1,0 +1,38 @@
+version: "3"
+services:
+  products:
+    container_name: products
+    build: ./subgraphs/products
+    ports:
+      - "4001:4000"
+  reviews:
+    container_name: reviews
+    build: ./subgraphs/reviews
+    ports:
+      - "4002:4000"
+  users:
+    container_name: users
+    build: ./subgraphs/users
+    ports:
+      - "4003:4000"
+
+  router:
+    platform: linux/amd64
+    environment:
+      - ENABLE_EXPOSE_QUERY_PLAN_ENV=true
+      - APOLLO_KEY=${APOLLO_KEY}
+      - APOLLO_GRAPH_REF=${APOLLO_GRAPH_REF}
+    build: router
+    security_opt:
+      - seccomp:unconfined
+    ports:
+      - "4040:4040"
+    volumes:
+      - ./router:/volume
+    command:
+      [
+        "-c",
+        "/volume/router.yml",
+        "-s",
+        "/volume/supergraph.graphql",
+      ]

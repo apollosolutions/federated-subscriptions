@@ -3,19 +3,22 @@
 federated-subscriptions/
 │
 ├── subgraphs/
-│   ├── js-apollo-server/
-│   │   ├── callback/
-│   │   ├── websockets/
-│   │   └── reliable-delivery/
-│   └── go-gqlgen/
-│       ├── callback/
-│       ├── websockets/
-│       └── reliable-delivery/
+│   ├── products/ # This is in Apollo Server
+│   ├── users/ # This is in Apollo Server
+│   └── reviews/
+│       ├── js-apollo-server/
+│       │   ├── callback/
+│       │   ├── websockets/
+│       │   └── reliable-delivery/
+│       └── go-gqlgen/
+│           ├── callback/
+│           ├── websockets/
+│           └── reliable-delivery/
 │
 ├── architecture_diagrams/
 │   ├── example.png
 │   └── complex.png
-|
+│
 ├── client/
 │
 ├── router/
