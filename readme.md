@@ -61,4 +61,4 @@ Currently what is supported, but will be extended for other examples
 - **SUBS_EXAMPLE**: `websockets`
 
 ## Related Content
-- Example Implementation for Reliable Delivery - (Lossless Subscription Example)[https://github.com/apollosolutions/lossless_subscription]
+- [Lossless Subscription Example](https://github.com/apollosolutions/lossless_subscription) - This is an example implementation for reliable delivery using a identifier
