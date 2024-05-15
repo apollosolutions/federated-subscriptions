@@ -2,7 +2,7 @@ version: "3"
 services:
   products:
     container_name: products
-    build: ./subgraphs/products
+    build: ./examples/products
     ports:
       - "4001:4000"
   reviews:
