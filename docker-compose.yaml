@@ -7,7 +7,7 @@ services:
       - "4001:4000"
   reviews:
     container_name: reviews
-    build: ./subgraphs/reviews
+    build: ./subgraphs/reviews/${FRAMEWORK}/${SUBS_EXAMPLE}
     ports:
       - "4002:4000"
   users:
