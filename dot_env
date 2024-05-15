@@ -1,0 +1,4 @@
+FRAMEWORK=js-apollo-server
+SUBS_EXAMPLE=websockets
+APOLLO_KEY=service:change-me:change-me
+APOLLO_GRAPH_REF=change-me@current
