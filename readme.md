@@ -7,13 +7,13 @@ federated-subscriptions/
 │   ├── users/ # This is in Apollo Server
 │   └── reviews/
 │       ├── js-apollo-server/
-│       │   ├── callback/
+│       │   ├── callback/  # In Progress
 │       │   ├── websockets/
-│       │   └── reliable-delivery/
+│       │   └── reliable-delivery/  # In Progress
 │       └── go-gqlgen/
-│           ├── callback/
+│           ├── callback/ # In Progress
 │           ├── websockets/
-│           └── reliable-delivery/
+│           └── reliable-delivery/  # In Progress
 │
 ├── architecture_diagrams/
 │   ├── example.png
@@ -35,7 +35,7 @@ This repository also includes a Apollo Client + React based client application t
 ![Example of Client](https://github.com/apollosolutions/se-subscription-demo/raw/main/client/public/demo.png)
 
 ## Getting Started
-1) Configure a `.env` file.
+1) Configure and create a `.env` file, by using the example provided in `dot_env`
 
 To use this demo you will need `APOLLO_KEY` and `APOLLO_GRAPH_REF` environment variables. Refer to the [Connect the router to Studio](https://www.apollographql.com/docs/router/managed-federation/setup/#4-connect-the-router-to-studio) documentation for steps outlining where to find these values.
 
@@ -47,3 +47,15 @@ APOLLO_GRAPH_REF=graphos-subscriptions-demo@current
 ```
 
 2) You must have [Node](https://nodejs.org/) installed to run the client application, and [Docker](https://www.docker.com) installed to run the Router and subgraphs.
+
+### Configure Stack and Example
+1) Update `.env` to include which framework to use:
+
+```
+FRAMEWORK=go-gqlgen
+SUBS_EXAMPLE=websockets
+```
+
+Currently what is supported, but will be extended for other examples
+- **FRAMEWORK**: `go-gqlgen`, `js-apollo-server`
+- **SUBS_EXAMPLE**: `websockets`
