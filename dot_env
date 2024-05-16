@@ -2,3 +2,4 @@ FRAMEWORK=js-apollo-server
 SUBS_EXAMPLE=websockets
 APOLLO_KEY=service:change-me:change-me
 APOLLO_GRAPH_REF=change-me@current
+REACT_APP_SUPERGRAPH_URI=http://localhost:4040/
