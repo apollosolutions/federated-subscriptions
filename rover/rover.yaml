@@ -4,12 +4,12 @@ subgraphs:
   products:
     routing_url: http://localhost:4001
     schema:
-      file: ./subgraphs/products/products.graphql
+      file: ../subgraphs/products/products.graphql
   reviews:
     routing_url: http://localhost:4002
     schema:
-      file: ./subgraphs/reviews/reviews.graphql
+      file: ../subgraphs/reviews/js-apollo-server/websockets/reviews.graphql
   users:
     routing_url: http://localhost:4003
     schema:
-      file: ./subgraphs/users/users.graphql
+      file: ../subgraphs/users/users.graphql
