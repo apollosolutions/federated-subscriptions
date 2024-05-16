@@ -31,12 +31,23 @@ This repository provides a collection of examples and references for implementin
 └── README.md
 ```
 
+### Demo Overview
+<div align="center">
+  <img src="https://github.com/apollosolutions/federated-subscriptions/raw/main/diagrams/demo-diagram.png" width="65%" alt="Preview of client available in repo">
+</div>
+
+
+The demo includes a federated environment with 3 subgraphs: products, reviews, and users.
+
+- **Products** + **Users**: subgraphs written in JS with Apollo Server that provide the additional metadata for a federated context, these are static across all demo
+- **Reviews** **Subgraph** provides various languages/framework examples and patterns to solve particular requirements. These are interchangable in the demo environment, and managed through the `.env` file.
+
 #### Client Demo
 
 This repository also includes an example with Apollo Client + React that leverages the power of Federated Subscriptions - federating data upon graphql subscription events.
 
 <div align="center">
-  <img src="https://github.com/apollosolutions/se-subscription-demo/raw/main/client/public/demo.png" width="65%" alt="Preview of client available in repo">
+  <img src="https://github.com/apollosolutions/federated-subscriptions/raw/main/diagram/client-ui.png" width="65%" alt="Preview of client available in repo">
 </div>
 
 
