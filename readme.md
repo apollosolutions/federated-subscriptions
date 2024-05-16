@@ -31,6 +31,15 @@ This repository provides a collection of examples and references for implementin
 └── README.md
 ```
 
+#### Client Demo
+
+This repository also includes an example with Apollo Client + React that leverages the power of Federated Subscriptions - federating data upon graphql subscription events.
+
+<div align="center">
+  <img src="https://github.com/apollosolutions/se-subscription-demo/raw/main/client/public/demo.png" width="65%" alt="Preview of client available in repo">
+</div>
+
+
 ## Getting Started
 > You must have [Node](https://nodejs.org/) installed to run the client application, and [Docker](https://www.docker.com) installed to run the Router and subgraphs.
 
@@ -78,15 +87,6 @@ In addition, you can quickly validate the deployment with the make command.
 make validate-demo
 ```
 
-### Client Demo
-
-This repository also includes a Apollo Client + React based client application that leverages the power of Federated Subscriptions.
-
-<div align="center">
-  <img src="https://github.com/apollosolutions/se-subscription-demo/raw/main/client/public/demo.png" width="65%" alt="Preview of client available in repo">
-</div>
-
-If using docker-compose, the UI is accessible at `http://localhost:3000`. 
 
 ## Modifying Demo
 ### Local Supergraph Composition
