@@ -6,7 +6,7 @@ This repository provides a collection of examples and references for implementin
 .
 │
 ├── subgraphs/
-│   ├── products/ # This is in Apollo Server
+│   ├── products/ # This is Apollo Server
 │   ├── users/ # This is in Apollo Server
 │   └── reviews/
 │       ├── js-apollo-server/
@@ -70,7 +70,7 @@ Currently what is supported, but will be extended for other examples
 
 ```bash
 cd federated-subscriptions
-docker-compose --env-file .env up
+make demo
 ```
 
 1) The router is now available at http://localhost:4040.
