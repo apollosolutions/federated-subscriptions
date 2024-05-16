@@ -1,7 +1,7 @@
 cors:
   allow_any_origin: true
 supergraph:
-  listen: 0.0.0.0:8080
+  listen: 0.0.0.0:4040
   introspection: true
 
 sandbox:
@@ -21,3 +21,9 @@ subscription:
       subgraphs:
         reviews:
           path: /
+
+# For Docker setup, comment out the following section if using local
+override_subgraph_url:
+  products: "http://products:4000"
+  users: "http://users:4000"
+  reviews: "http://reviews:4000"

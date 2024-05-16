@@ -51,11 +51,13 @@ RUN mkdir config schema
 
 # Copy configuration for docker image
 COPY router.yaml config
+COPY supergraph.graphql schema
 
 LABEL org.opencontainers.image.authors="Apollo Graph, Inc. https://github.com/apollographql/router"
 LABEL org.opencontainers.image.source="https://github.com/apollographql/router"
 
 ENV APOLLO_ROUTER_CONFIG_PATH="/dist/config/router.yaml"
+ENV APOLLO_ROUTER_SUPERGRAPH_PATH="/dist/schema/supergraph.graphql"
 
 # Create a wrapper script to run the router, use exec to ensure signals are handled correctly
 RUN \
