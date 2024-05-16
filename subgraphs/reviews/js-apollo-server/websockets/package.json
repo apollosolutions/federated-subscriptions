@@ -8,8 +8,8 @@
     "start": "node reviews.js"
   },
   "dependencies": {
-    "@apollo/server": "^4.5.0",
-    "@apollo/subgraph": "2.4.0",
+    "@apollo/server": "^4.10.0",
+    "@apollo/subgraph": "2.7.0",
     "@graphql-tools/schema": "^9.0.17",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
