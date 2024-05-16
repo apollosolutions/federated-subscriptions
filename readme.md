@@ -34,8 +34,7 @@ This repository provides a collection of examples and references for implementin
 ### Demo Overview
 <div align="center">
   <img src="https://github.com/apollosolutions/federated-subscriptions/raw/main/diagrams/demo-diagram.png" width="65%" alt="Preview of client available in repo">
-</div>
-
+</div><br> 
 
 The demo includes a federated environment with 3 subgraphs: products, reviews, and users.
 
