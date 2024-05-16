@@ -100,7 +100,7 @@ const server = new ApolloServer({
 await server.start();
 app.use("/", cors(), json(), expressMiddleware(server));
 
-const PORT = 8080;
+const PORT = 4000;
 httpServer.listen(PORT, () => {
   console.log(`🚀 Reviews subgraph ready at http://localhost:${PORT}/`);
 });
