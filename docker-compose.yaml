@@ -22,7 +22,7 @@ services:
       - ENABLE_EXPOSE_QUERY_PLAN_ENV=true
       - APOLLO_KEY=${APOLLO_KEY}
       - APOLLO_GRAPH_REF=${APOLLO_GRAPH_REF}
-    build: router
+    build: ./router
     security_opt:
       - seccomp:unconfined
     ports:
@@ -32,7 +32,14 @@ services:
     command:
       [
         "-c",
-        "/volume/router.yml",
+        "/volume/router.yaml",
         "-s",
         "/volume/supergraph.graphql",
       ]
+
+  client:
+    environment:
+      - REACT_APP_SUPERGRAPH_URI=http://localhost:4040/graphql
+    build: ./client
+    ports:
+      - "3000:3000"

@@ -7,7 +7,7 @@ import { App } from "./App";
 import "./index.css";
 
 const client = new ApolloClient({
-  uri: "https://sub-router-api-z7dpe2fvra-ue.a.run.app/",
+  uri: process.env.REACT_APP_SUPERGRAPH_URI || "http://localhost:4040/",
   cache: new InMemoryCache(),
 });
 
