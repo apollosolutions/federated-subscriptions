@@ -87,7 +87,9 @@ rover supergraph compose --config rover.yaml > ./router/supergraph.graphql
 ## Client Demo
 This repository also includes a Apollo Client + React based client application that leverages the power of Federated Subscriptions.
 
-![Example of Client](https://github.com/apollosolutions/se-subscription-demo/raw/main/client/public/demo.png)
+<div align="center">
+  <img src="https://github.com/apollosolutions/se-subscription-demo/raw/main/client/public/demo.png" width="65%" alt="Preview of client available in repo">
+</div>
 
 If using docker-compose, the UI is accessible at `http://localhost:3000`. 
 
