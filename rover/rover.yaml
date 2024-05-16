@@ -1,3 +1,4 @@
+# Used for websockets and callback schemas
 federation_version: =2.3.1
 subgraphs:
   products:

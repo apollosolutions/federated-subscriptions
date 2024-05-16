@@ -51,7 +51,7 @@ To use this demo you will need `APOLLO_KEY` and `APOLLO_GRAPH_REF` environment v
 
 Once you have these values add them to a `.env` file like:
 
-```
+```env
 APOLLO_KEY=service:graphos-subscriptions-demo:A1a1B1b1C1c1
 APOLLO_GRAPH_REF=graphos-subscriptions-demo@current
 ```
@@ -61,7 +61,7 @@ APOLLO_GRAPH_REF=graphos-subscriptions-demo@current
 ### Configure Stack and Example
 1) Update `.env` to include which framework to use:
 
-```
+```env
 FRAMEWORK=go-gqlgen
 SUBS_EXAMPLE=websockets
 ```
