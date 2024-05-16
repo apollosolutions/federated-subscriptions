@@ -2,8 +2,8 @@
 
 This repository provides a consolidation of examples and references for implementing federated subscriptions.
 
-```
-federated-subscriptions/
+```shell
+.
 │
 ├── subgraphs/
 │   ├── products/ # This is in Apollo Server
@@ -19,16 +19,15 @@ federated-subscriptions/
 │           └── reliable-delivery/  # In Progress
 │
 ├── architecture_diagrams/
-│   ├── example.png
-│   └── complex.png
 │
-├── client/
+├── client/ # Client React demo with Apollo Client
+├── rover/ # Rover configurations for local composition
 │
-├── router/
-│   └── router.yaml
+├── router/ #
 │
-├── Dockerfile
-├── makefile
+├── docker-compose.yaml # Docker compose set up for a full deployment of client, router, subgraphs
+├── makefile # Commands to simplify usage
+├── dot_env # Copy and update for .env file
 └── README.md
 ```
 
