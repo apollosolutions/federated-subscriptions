@@ -47,7 +47,7 @@ The demo includes a federated environment with 3 subgraphs: products, reviews, a
 This repository also includes an example with Apollo Client + React that leverages the power of Federated Subscriptions - federating data upon graphql subscription events.
 
 <div align="center">
-  <img src="https://github.com/apollosolutions/federated-subscriptions/raw/main/diagram/client-ui.png" width="65%" alt="Preview of client available in repo">
+  <img src="https://github.com/apollosolutions/federated-subscriptions/raw/main/diagrams/client-ui.png" width="65%" alt="Preview of client available in repo">
 </div>
 
 
