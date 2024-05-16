@@ -32,12 +32,13 @@ This repository provides a collection of examples and references for implementin
 ```
 
 ## Getting Started
+> You must have [Node](https://nodejs.org/) installed to run the client application, and [Docker](https://www.docker.com) installed to run the Router and subgraphs.
+
 1) Clone this repo:
 
 ```
 git clone https://github.com/apollosolutions/federated-subscriptions.git
 ```
-
 
 2) Configure and create a `.env` file, by using the example provided in `dot_env`
 
@@ -50,10 +51,7 @@ APOLLO_KEY=service:graphos-subscriptions-demo:A1a1B1b1C1c1
 APOLLO_GRAPH_REF=graphos-subscriptions-demo@current
 ```
 
-3) You must have [Node](https://nodejs.org/) installed to run the client application, and [Docker](https://www.docker.com) installed to run the Router and subgraphs.
-
-### Configure Stack and Example
-1) Update `.env` to include which framework to use:
+4) Update `.env` to include which framework to use:
 
 ```env
 FRAMEWORK=go-gqlgen
@@ -64,27 +62,24 @@ Currently what is supported, but will be extended for other examples
 - **FRAMEWORK**: `go-gqlgen`, `js-apollo-server`
 - **SUBS_EXAMPLE**: `websockets`
 
-### Router and Subgraph Setup
+### Start Up Containers
 
-2) Start the subgraphs and Router (Docker containers):
+1) Start the Subgraphs and Router (Docker containers):
 
 ```bash
 cd federated-subscriptions
 make demo
 ```
 
-1) The router is now available at http://localhost:4040.
+After composing, the router is now available at http://localhost:4040 and the client is available at http://localhost:3000.
 
-### Supergraph Composition
-
-If you want to test making changes to subgraph schemas, and have [rover](https://www.apollographql.com/docs/rover) installed, run the following to compose a new supergraph:
-
+In addition, you can quickly validate the deployment with the make command.
 ```bash
-cd federated-subscriptions
-rover supergraph compose --config rover.yaml > ./router/supergraph.graphql
+make validate-demo
 ```
 
-## Client Demo
+### Client Demo
+
 This repository also includes a Apollo Client + React based client application that leverages the power of Federated Subscriptions.
 
 <div align="center">
@@ -92,6 +87,21 @@ This repository also includes a Apollo Client + React based client application t
 </div>
 
 If using docker-compose, the UI is accessible at `http://localhost:3000`. 
+
+## Modifying Demo
+### Local Supergraph Composition
+
+If you want to test making changes to subgraph schemas, and have [rover](https://www.apollographql.com/docs/rover) installed.
+
+Update the `rover/rover.yaml` with the correct subgraph reference, and run the following to compose a new supergraph:
+
+```bash
+cd federated-subscriptions
+rover supergraph compose --config rover.yaml > ./router/supergraph.graphql
+```
+
+### Running Locally
+If you want to run outside of docker, you'll need to uncomment the overrides in the `router/router.yaml` configuration.
 
 ## Related Content
 - [Lossless Subscription Example](https://github.com/apollosolutions/lossless_subscription) - This is an example implementation for reliable delivery using a identifier
