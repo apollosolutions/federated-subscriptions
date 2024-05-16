@@ -9,7 +9,7 @@ sandbox:
 homepage:
   enabled: false
 include_subgraph_errors:
-  all: true # Propagate errors from all subraphs
+  all: true # Propagate errors from all subgraphs
 telemetry:
   metrics:
     prometheus:
