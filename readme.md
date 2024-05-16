@@ -74,7 +74,7 @@ Currently what is supported, but will be extended for other examples
 
 2) Start the subgraphs and Router (Docker containers):
 
-```
+```bash
 cd federated-subscriptions
 docker-compose --env-file .env up
 ```
@@ -85,7 +85,7 @@ docker-compose --env-file .env up
 
 If you want to test making changes to subgraph schemas, and have [rover](https://www.apollographql.com/docs/rover) installed, run the following to compose a new supergraph:
 
-```
+```bash
 cd federated-subscriptions
 rover supergraph compose --config rover.yaml > ./router/supergraph.graphql
 ```
