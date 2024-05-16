@@ -1,6 +1,6 @@
 # Federated Subscriptions
 
-This repository provides a consolidation of examples and references for implementing federated subscriptions.
+This repository provides a collection of examples and references for implementing federated graphql subscriptions with Apollo Router.
 
 ```shell
 .
@@ -30,11 +30,6 @@ This repository provides a consolidation of examples and references for implemen
 ├── dot_env # Copy and update for .env file
 └── README.md
 ```
-
-## Client Demo
-This repository also includes a Apollo Client + React based client application that leverages the power of Federated Subscriptions.
-
-![Example of Client](https://github.com/apollosolutions/se-subscription-demo/raw/main/client/public/demo.png)
 
 ## Getting Started
 1) Clone this repo:
@@ -88,6 +83,13 @@ If you want to test making changes to subgraph schemas, and have [rover](https:/
 cd federated-subscriptions
 rover supergraph compose --config rover.yaml > ./router/supergraph.graphql
 ```
+
+## Client Demo
+This repository also includes a Apollo Client + React based client application that leverages the power of Federated Subscriptions.
+
+![Example of Client](https://github.com/apollosolutions/se-subscription-demo/raw/main/client/public/demo.png)
+
+If using docker-compose, the UI is accessible at `http://localhost:3000`. 
 
 ## Related Content
 - [Lossless Subscription Example](https://github.com/apollosolutions/lossless_subscription) - This is an example implementation for reliable delivery using a identifier
