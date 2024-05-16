@@ -18,7 +18,7 @@ This repository provides a collection of examples and references for implementin
 │           ├── websockets/
 │           └── reliable-delivery/  # In Progress
 │
-├── architecture_diagrams/
+├── diagrams/
 │
 ├── client/ # Client React demo with Apollo Client
 ├── rover/ # Rover configurations for local composition
