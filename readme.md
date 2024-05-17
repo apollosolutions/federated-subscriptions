@@ -111,10 +111,6 @@ make validate-demo
 # Success! A subscription was requested, and data was received successfully!"
 ```
 
-![Result](https://github.com/apollosolutions/federated-subscriptions/assets/6020066/c0fe3c4d-2434-4c59-a6d1-4b6cb068dc73)
-
-
-
 ## Modifying Demo
 ### Local Supergraph Composition
 
