@@ -123,4 +123,10 @@ rover supergraph compose --config rover.yaml > ./router/supergraph.graphql
 If you want to run outside of docker, you'll need to uncomment the overrides in the `router/router.yaml` configuration.
 
 ## Related Content
-- [Lossless Subscription Example](https://github.com/apollosolutions/lossless_subscription) - This is an example implementation for reliable delivery using a identifier
+#### Server
+- [Lossless Subscription Example](https://github.com/apollosolutions/lossless_subscription) - This is an example implementation in Rust and Typescript for lossless delivery
+- [Apollo GraphQL Federated Subscription Blog Post](https://www.apollographql.com/blog/federated-subscriptions-in-graphos-real-time-data-at-scale) - High-level overview of federated subscriptions
+
+#### Client
+- [Incremental Delivery Specification](https://github.com/graphql/graphql-over-http/blob/main/rfcs/IncrementalDelivery.md) - Outlines the specification used by the router to deliver subscription events to clients
+- [Network Adapters for Other Clients (relay and urql)](https://www.apollographql.com/docs/react/data/subscriptions/#usage-with-relay-or-urql) - Network adapters to extend support for other GraphQL clients 
