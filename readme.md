@@ -21,9 +21,11 @@ This repository provides a end-to-end demo of federated subscriptions with Apoll
 ├── diagrams/
 │
 ├── client/ # Client React demo with Apollo Client
-├── rover/ # Rover configurations for local composition
+├── rover/ # Rover configurations for local composition per example
+│   └── websockets/ 
 │
-├── router/ #
+├── router/ # Router files - Dockerfile and configurations per example
+│   └── websockets/ 
 │
 ├── docker-compose.yaml # Docker compose set up for a full deployment of client, router, subgraphs
 ├── makefile # Commands to simplify usage
@@ -126,18 +128,22 @@ make test-sub
 
 ## Modifying Demo
 ### Local Supergraph Composition
-
 If you want to test making changes to subgraph schemas, and have [rover](https://www.apollographql.com/docs/rover) installed.
 
 Update the `rover/rover.yaml` with the correct subgraph reference, and run the following to compose a new supergraph:
 
 ```bash
 cd federated-subscriptions
-rover supergraph compose --config rover.yaml > ./router/supergraph.graphql
+rover supergraph compose --config ./rover/your-example/rover.yaml > ./router/your-example/supergraph.graphql
 ```
 
 ### Running Locally
-If you want to run outside of docker, you'll need to uncomment the overrides in the `router/router.yaml` configuration.
+If you want to run outside of docker, you'll need to uncomment the overrides in the `router/<SUBS_EXAMPLE>/router.yaml` configuration.
+
+### Contributing an Example
+1) Place a corresponding example directory in `subgraph/<framework>/<example>`
+2) Add associated configurations for the `router/<example>` and `rover/<example>`
+3) Test containers: `make build-force && make demo`
 
 ## Related Content
 #### Server

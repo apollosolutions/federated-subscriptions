@@ -1,18 +1,33 @@
 include .env
 
+# -------------------------
+# Setup
+# -------------------------
 demo up:
 	docker-compose --env-file .env up
 
 build-force:
 	docker-compose --env-file .env build --no-cache
 
-local-client:
-	cd client && npm run start
+build-force-router:
+	docker-compose --env-file .env build --no-cache router
+
+build-force-reviews build-force-subgraph:
+	docker-compose --env-file .env build --no-cache router
 
 # To allow extending to other examples in the future
 supergraph-compose supergraph-compose-ws supergraph-compose-callback:
-	rover supergraph compose --config ./rover/rover.yaml > ./router/supergraph.graphql
+	rover supergraph compose --config ./rover/${SUBS_EXAMPLE}/rover.yaml > ./router/${SUBS_EXAMPLE}/supergraph.graphql
 
+# -------------------------
+# Local Development
+# -------------------------
+local-client:
+	cd client && npm run start
+
+# -------------------------
+# Testing
+# -------------------------
 curl-sub:
 	curl --max-time $(max_time) -s --request POST \
 	--header 'Content-Type: application/json' \

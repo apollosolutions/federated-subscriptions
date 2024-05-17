@@ -49,9 +49,12 @@ RUN rm -rf /var/lib/apt/lists/*
 # Make directories for config and schema
 RUN mkdir config schema
 
+ARG SUBS_EXAMPLE
+
 # Copy configuration for docker image
-COPY router.yaml config
-COPY supergraph.graphql schema
+# depending on the example
+COPY ${SUBS_EXAMPLE}/router.yaml config
+COPY ${SUBS_EXAMPLE}/supergraph.graphql schema
 
 LABEL org.opencontainers.image.authors="Apollo Graph, Inc. https://github.com/apollographql/router"
 LABEL org.opencontainers.image.source="https://github.com/apollographql/router"
