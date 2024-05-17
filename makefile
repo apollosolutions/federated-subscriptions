@@ -12,8 +12,8 @@ build-force:
 build-force-router:
 	docker-compose --env-file .env build --no-cache router
 
-build-force-reviews build-force-subgraph:
-	docker-compose --env-file .env build --no-cache router
+build-force-reviews:
+	docker-compose --env-file .env build --no-cache reviews
 
 # To allow extending to other examples in the future
 supergraph-compose supergraph-compose-ws supergraph-compose-callback:

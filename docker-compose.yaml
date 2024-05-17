@@ -5,10 +5,10 @@ services:
     build: ./subgraphs/products
     ports:
       - "4001:4000"
+
   reviews:
     container_name: reviews
     build: ./subgraphs/reviews/${FRAMEWORK}/${SUBS_EXAMPLE}
-    
     ports:
       - "4002:4000"
       
@@ -34,13 +34,6 @@ services:
       - "4040:4040"
     volumes:
       - ./router:/volume
-    # command:
-    #   [
-    #     "-c",
-    #     "/volume/router.yaml",
-    #     "-s",
-    #     "/volume/supergraph.graphql",
-    #   ]
 
   client:
     environment:
