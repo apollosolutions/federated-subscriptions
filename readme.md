@@ -101,7 +101,8 @@ make demo
 
 After composing, the router is now available at http://localhost:4040 and the client is available at http://localhost:3000.
 
-In addition, you can quickly validate the deployment with the make command.
+In addition, you can quickly validate the deployment with the make command or test a subscription from your terminal
+
 ```bash
 make validate-demo
 
@@ -109,6 +110,18 @@ make validate-demo
 # --graphql
 # --graphql
 # Success! A subscription was requested, and data was received successfully!"
+
+make test-sub
+
+# --graphql
+# content-type: application/json
+
+# {}
+# --graphql
+# content-type: application/json
+
+# {"payload":{"data":{"reviewAdded":{"id":1,"body":"Apollo may only be the 3rd US human spaceflight program, but my ride was 1st class!","product":{"createdBy":{"name":"Neil Armstrong","email":"neil.armstrong@finalfrontier.com"},"name":"Apollo 11 Ride","sku":"apollo-11-ride"}}}}}
+# --graphql
 ```
 
 ## Modifying Demo
