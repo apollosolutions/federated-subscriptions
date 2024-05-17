@@ -141,9 +141,10 @@ rover supergraph compose --config ./rover/your-example/rover.yaml > ./router/you
 If you want to run outside of docker, you'll need to uncomment the overrides in the `router/<SUBS_EXAMPLE>/router.yaml` configuration.
 
 ### Contributing an Example
-1) Place a corresponding example directory in `subgraph/<framework>/<example>`
-2) Add associated configurations for the `router/<example>` and `rover/<example>`
-3) Test containers: `make build-force && make demo`
+1) Make sure your example graph runs on port `4000` and it's graphql and subscription endpoint is also on `/graphql`
+2) Place the corresponding example and it's `Dockerfile` in the respective directory in `subgraph/<framework>/<example>`
+3) Add associated configurations for the `router/<example>` and `rover/<example>`
+4) Test containers: `make build-force && make demo`
 
 ## Related Content
 #### General
