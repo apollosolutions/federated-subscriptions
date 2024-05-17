@@ -104,7 +104,15 @@ After composing, the router is now available at http://localhost:4040 and the cl
 In addition, you can quickly validate the deployment with the make command.
 ```bash
 make validate-demo
+
+# --graphql
+# --graphql
+# --graphql
+# Success! A subscription was requested, and data was received successfully!"
 ```
+
+![Result](https://github.com/apollosolutions/federated-subscriptions/assets/6020066/c0fe3c4d-2434-4c59-a6d1-4b6cb068dc73)
+
 
 
 ## Modifying Demo
