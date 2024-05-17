@@ -24,4 +24,4 @@ test-sub:
 	@make curl-sub max_time=10
 
 validate-demo:
-	@make curl-sub max_time=3 2>/dev/null | grep -- "--graphql" && echo "Success! Was able to make subscription request and recieve data" || echo "Failed to retrieve data for subscription"
+	@make curl-sub max_time=3 2>/dev/null | grep -- "--graphql" && echo "Success! A subscription was requested, and data was received successfully!" || echo "Failed to retrieve data for subscription request!"
