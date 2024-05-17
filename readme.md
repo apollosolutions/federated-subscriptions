@@ -38,8 +38,9 @@ This repository provides a collection of examples and references for implementin
 
 The demo includes a federated environment with 3 subgraphs: products, reviews, and users.
 
-- **Products** + **Users**: subgraphs written in JS with Apollo Server that provide the additional metadata for a federated context, these are static across all demo
-- **Reviews** **Subgraph** provides various languages/framework examples and patterns to solve particular requirements. These are interchangable in the demo environment, and managed through the `.env` file.
+- **Products + Users Subgraphs** - 2 Subgraphs written in Javascript with Apollo Server that provide the additional metadata for a federated context, these are static across all demo
+
+- **Reviews Subgraph** - The primary **subscription subgraph** written in various languages/framework including example patterns to solve particular requirements. These are interchangable in the demo environment, and managed through the `.env` file.
 
 #### Client Demo
 
