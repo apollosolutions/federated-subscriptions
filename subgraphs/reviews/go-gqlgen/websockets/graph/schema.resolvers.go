@@ -51,9 +51,11 @@ func (r *subscriptionResolver) ReviewAdded(ctx context.Context) (<-chan *model.R
 
 	go func() {
 		defer close(ch)
-		for _, review := range reviews {
-			ch <- review
-			time.Sleep(3 * time.Second)
+		for { 
+			for _, review := range reviews {
+				ch <- review
+				time.Sleep(3 * time.Second)
+			}
 		}
 	}()
 	return ch, nil
