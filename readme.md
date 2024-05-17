@@ -51,8 +51,13 @@ This repository also includes an example with Apollo Client + React that leverag
 
 
 ## Getting Started
-> You must have [Node](https://nodejs.org/) installed to run the client application, and [Docker](https://www.docker.com) installed to run the Router and subgraphs.
 
+### Requirements
+You will need an **enterprise enabled** GraphOS account, please reach out to your account team to acquire a trial account or schedule a [quick consultation](https://www.apollographql.com/enterprise).
+
+In addition, you will need [Docker](https://www.docker.com) installed to run the complete demo (router, subgraphs, client).
+
+### Usage
 1) Clone this repo:
 
 ```
@@ -69,6 +74,8 @@ Once you have these values add them to a `.env` file like:
 APOLLO_KEY=service:graphos-subscriptions-demo:A1a1B1b1C1c1
 APOLLO_GRAPH_REF=graphos-subscriptions-demo@current
 ```
+
+> Note: The `APOLLO_KEY` and `APOLLO_GRAPH_REF` are only used to validate enterprise entitlements to use subscriptions onthe router, but when running the demo, the schema is overrided by the `router/supergraph.graphl` schema file.
 
 4) Update `.env` to include which framework to use:
 
