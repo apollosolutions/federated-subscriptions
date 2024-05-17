@@ -146,9 +146,12 @@ If you want to run outside of docker, you'll need to uncomment the overrides in 
 3) Test containers: `make build-force && make demo`
 
 ## Related Content
+#### General
+- [Video of Federated Subscriptions for Real-time Applications Talk at Summit 2023](https://www.youtube.com/watch?v=-4R6rLMZ9mc&list=PLpi1lPB6opQzUOqG3QroLLN06FF-Q_uhX&index=4) - Discusses the before and after state of federated subscriptions, engineering decisions, and performance testing
+- [Apollo GraphQL Federated Subscription Blog Post](https://www.apollographql.com/blog/federated-subscriptions-in-graphos-real-time-data-at-scale) - High-level overview of federated subscriptions
+
 #### Server
 - [Lossless Subscription Example](https://github.com/apollosolutions/lossless_subscription) - This is an example implementation in Rust and Typescript for lossless delivery
-- [Apollo GraphQL Federated Subscription Blog Post](https://www.apollographql.com/blog/federated-subscriptions-in-graphos-real-time-data-at-scale) - High-level overview of federated subscriptions
 
 #### Client
 - [Incremental Delivery Specification](https://github.com/graphql/graphql-over-http/blob/main/rfcs/IncrementalDelivery.md) - Outlines the specification used by the router to deliver subscription events to clients
