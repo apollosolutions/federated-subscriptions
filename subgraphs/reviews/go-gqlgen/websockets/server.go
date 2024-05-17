@@ -8,7 +8,7 @@ import (
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/handler/transport"
 	"github.com/99designs/gqlgen/graphql/playground"
-	"github.com/ausimity/review_gqlgen/graph"
+	"github.com/apollosolutions/review_gqlgen/graph"
 	"github.com/gorilla/websocket"
 )
 

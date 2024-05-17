@@ -8,7 +8,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/ausimity/review_gqlgen/graph/model"
+	"github.com/apollosolutions/review_gqlgen/graph/model"
 )
 
 // FindProductByID is the resolver for the findProductByID field.

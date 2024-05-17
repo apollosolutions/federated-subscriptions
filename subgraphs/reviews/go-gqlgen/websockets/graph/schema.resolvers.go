@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ausimity/review_gqlgen/graph/model"
+	"github.com/apollosolutions/review_gqlgen/graph/model"
 )
 
 var reviews = []*model.Review{
@@ -51,7 +51,7 @@ func (r *subscriptionResolver) ReviewAdded(ctx context.Context) (<-chan *model.R
 
 	go func() {
 		defer close(ch)
-		for { 
+		for {
 			for _, review := range reviews {
 				ch <- review
 				time.Sleep(3 * time.Second)

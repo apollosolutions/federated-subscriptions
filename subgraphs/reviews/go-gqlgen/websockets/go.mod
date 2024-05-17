@@ -1,4 +1,4 @@
-module github.com/ausimity/review_gqlgen
+module github.com/apollosolutions/review_gqlgen
 
 go 1.19
 
