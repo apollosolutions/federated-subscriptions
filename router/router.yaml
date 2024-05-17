@@ -24,6 +24,6 @@ subscription:
 
 # For Docker setup, comment out the following section if using local
 override_subgraph_url:
-  products: "http://products:4000"
-  users: "http://users:4000"
-  reviews: "http://reviews:4000"
+  products: "http://products:4000/graphql"
+  users: "http://users:4000/graphql"
+  reviews: "http://reviews:4000/graphql"

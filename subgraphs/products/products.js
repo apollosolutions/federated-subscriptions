@@ -76,7 +76,10 @@ const resolvers = {
 const schema = buildSubgraphSchema({ typeDefs, resolvers });
 const server = new ApolloServer({ schema });
 
+// We are setting the path to /graphql
+// to simplify integrating the demo with the other subgraphs
 const { url } = await startStandaloneServer(server, {
   listen: { port: 4000 },
+  path: "/graphql",
 });
 console.log(`🚀 Products subgraph ready at ${url}`);

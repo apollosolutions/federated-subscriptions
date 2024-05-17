@@ -75,9 +75,12 @@ const app = express();
 const httpServer = createServer(app);
 
 const schema = buildSubgraphSchema({ typeDefs, resolvers });
+
+// We are setting the path to /graphql
+// to simplify integrating the demo with the other subgraphs
 const wsServer = new WebSocketServer({
   server: httpServer,
-  path: "/",
+  path: "/graphql",
 });
 const serverCleanup = useServer({ schema }, wsServer);
 
@@ -98,7 +101,7 @@ const server = new ApolloServer({
 });
 
 await server.start();
-app.use("/", cors(), json(), expressMiddleware(server));
+app.use("/graphql", cors(), json(), expressMiddleware(server));
 
 const PORT = 4000;
 httpServer.listen(PORT, () => {

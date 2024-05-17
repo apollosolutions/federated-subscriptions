@@ -2,14 +2,14 @@
 federation_version: =2.7.0
 subgraphs:
   products:
-    routing_url: http://localhost:4001
+    routing_url: http://localhost:4001/graphql
     schema:
       file: ../subgraphs/products/products.graphql
   reviews:
-    routing_url: http://localhost:4002
+    routing_url: http://localhost:4002/graphql
     schema:
       file: ../subgraphs/reviews/js-apollo-server/websockets/reviews.graphql
   users:
-    routing_url: http://localhost:4003
+    routing_url: http://localhost:4003/graphql
     schema:
       file: ../subgraphs/users/users.graphql
