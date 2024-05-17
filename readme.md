@@ -1,6 +1,6 @@
 # Federated Subscriptions
 
-This repository provides a collection of examples and references for implementing federated graphql subscriptions with Apollo Router.
+This repository provides a end-to-end demo of federated subscriptions with Apollo Federation along with a collection of examples and implementation patterns that can be easily wired into the demo environment.
 
 ```shell
 .
