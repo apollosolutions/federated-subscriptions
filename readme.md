@@ -69,7 +69,7 @@ git clone https://github.com/apollosolutions/federated-subscriptions.git
 
 To use this demo you will need `APOLLO_KEY` and `APOLLO_GRAPH_REF` environment variables. Refer to the [Connect the router to Studio](https://www.apollographql.com/docs/router/managed-federation/setup/#4-connect-the-router-to-studio) documentation for steps outlining where to find these values.
 
-Once you have these values add them to a `.env` file like:
+Once you have these values add them to a `.env` file:
 
 ```env
 APOLLO_KEY=service:graphos-subscriptions-demo:A1a1B1b1C1c1
