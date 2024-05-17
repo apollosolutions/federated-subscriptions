@@ -20,7 +20,7 @@ subscription:
       # docker setup, for local setup comment out the following section
       subgraphs:
         reviews:
-          path: /
+          path: /graphql
 
 # For Docker setup, comment out the following section if using local
 override_subgraph_url:
