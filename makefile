@@ -6,6 +6,18 @@ include .env
 demo up:
 	docker-compose --env-file .env up
 
+build:
+	docker-compose --env-file .env build
+
+build-router:
+	docker-compose --env-file .env build router
+
+build-reviews:
+	docker-compose --env-file .env build reviews
+
+# -------------------------
+# Force Rebuild
+# -------------------------
 build-force:
 	docker-compose --env-file .env build --no-cache
 
