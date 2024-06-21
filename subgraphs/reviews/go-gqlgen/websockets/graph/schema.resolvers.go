@@ -50,11 +50,32 @@ func (r *subscriptionResolver) ReviewAdded(ctx context.Context) (<-chan *model.R
 	ch := make(chan *model.Review)
 
 	go func() {
+		delay := 20 * time.Second
 		defer close(ch)
+		ch <- &model.Review{
+			ID:      reviews[0].ID,
+			Body:    reviews[0].Body,
+			Product: &model.Product{ID: reviews[0].Product.ID},
+		}
+		idx := 1
+		timer := time.NewTimer(delay)
 		for {
-			for _, review := range reviews {
-				ch <- review
-				time.Sleep(3 * time.Second)
+			select {
+			case <-ctx.Done():
+				fmt.Println("subscription closed, leaving")
+				return
+			case <-timer.C:
+				timer.Reset(delay)
+				ch <- &model.Review{
+					ID:      reviews[idx].ID,
+					Body:    reviews[idx].Body,
+					Product: &model.Product{ID: reviews[idx].Product.ID},
+				}
+				idx += 1
+				if idx >= len(reviews) {
+					return
+				}
+			default:
 			}
 		}
 	}()
