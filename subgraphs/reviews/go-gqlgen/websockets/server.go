@@ -1,6 +1,8 @@
 package main
 
 import (
+	"context"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -26,6 +28,11 @@ func main() {
 			CheckOrigin: func(r *http.Request) bool {
 				return true
 			},
+		},
+		ErrorFunc: func(ctx context.Context, err error) {
+			if websocket.IsUnexpectedCloseError(err, websocket.CloseGoingAway, websocket.CloseAbnormalClosure) {
+				fmt.Println("WEBSOCKET UNEXPECTED CLOSE ERROR", err)
+			}
 		},
 	})
 	http.Handle("/", playground.Handler("GraphQL playground", "/graphql"))

@@ -1,0 +1,46 @@
+name: PR Checks
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: Build and Test
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: "17"
+          distribution: "temurin"
+          cache: gradle
+
+      - name: Execute build
+        run: ./gradlew clean build
+
+  check_schema:
+    name: Check Schema with Apollo Studio
+    if: false
+    needs: [test]
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      # rename this to a valid subgraph name
+      SUBGRAPH_NAME: foo-bar
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+      - name: Install Rover
+        run: |
+          curl -sSL https://rover.apollo.dev/nix/latest | sh
+          echo "$HOME/.rover/bin" >> $GITHUB_PATH
+      - name: Schema Check
+        run: rover subgraph check ${{ secrets.APOLLO_GRAPH_REF }} --schema src/main/resources/schema/schema.graphqls --name ${{ env.SUBGRAPH_NAME }}
+        env:
+          APOLLO_KEY: ${{ secrets.APOLLO_KEY }}
