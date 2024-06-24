@@ -89,7 +89,7 @@ SUBS_EXAMPLE=websockets
 ```
 
 Currently what is supported, but will be extended for other examples
-- **FRAMEWORK**: `go-gqlgen`, `js-apollo-server` *(planned: `java-dgs`, `dot-net-hot-chocolate`)*
+- **FRAMEWORK**: `go-gqlgen`, `js-apollo-server`, `java-dgs`, *(Planned: `dot-net-hot-chocolate`)*
   
 - **SUBS_EXAMPLE**: `websockets` *(planned: `callback`, `reliable-delivery/lossless`)*
 
