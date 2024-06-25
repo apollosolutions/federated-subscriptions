@@ -1,7 +1,5 @@
 # Java DGS GraphQL Subgraph Websockets
 
-- Our router configuration sets the subscription path to `/graphql`, note by default dgs sets it to `/subscription`
-
 ## Additional Resources
 
 * [DGS documentation](https://netflix.github.io/dgs/)

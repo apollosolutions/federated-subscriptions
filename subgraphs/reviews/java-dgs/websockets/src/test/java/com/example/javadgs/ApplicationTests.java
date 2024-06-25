@@ -26,11 +26,11 @@ class SubscriptionDataFetcherTest {
 				.thenAwait(Duration.ofSeconds(1)) // wait for the initial delay
 				.expectNextMatches(reviewMatchesBody(reviews.get(0))) // expect the first item
 				.thenAwait(Duration.ofSeconds(3)) // wait for the interval
-	            .expectNextMatches(reviewMatchesBody(reviews.get(1))) // expect the second item
+				.expectNextMatches(reviewMatchesBody(reviews.get(1))) // expect the second item
 				.thenAwait(Duration.ofSeconds(3)) // wait for the interval
-	            .expectNextMatches(reviewMatchesBody(reviews.get(2))) // expect the third item
+				.expectNextMatches(reviewMatchesBody(reviews.get(2))) // expect the third item
 				.thenAwait(Duration.ofSeconds(3)) // wait for the interval
-	            .expectNextMatches(reviewMatchesBody(reviews.get(3))) // expect the fourth item
+				.expectNextMatches(reviewMatchesBody(reviews.get(3))) // expect the fourth item
 				.thenCancel() // cancel the subscription
 				.verify(); // verify the expectations
 	}
