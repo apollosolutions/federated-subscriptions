@@ -10,13 +10,13 @@ This repository provides a end-to-end demo of federated subscriptions with Apoll
 │   ├── users/ # This is in Apollo Server
 │   └── reviews/
 │       ├── js-apollo-server/
-│       │   ├── callback/  # In Progress
 │       │   ├── websockets/
 │       │   └── reliable-delivery/  # In Progress
 │       └── go-gqlgen/
-│           ├── callback/ # In Progress
-│           ├── websockets/
-│           └── reliable-delivery/  # In Progress
+│       │   ├── websockets/
+│       │   └── reliable-delivery/  # In Progress
+│       └── java-dgs
+│           └── websockets/
 │
 ├── diagrams/
 │
