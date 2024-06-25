@@ -28,6 +28,7 @@ services:
       context: ./router
       args:
         - SUBS_EXAMPLE=${SUBS_EXAMPLE}
+        - FRAMEWORK=${FRAMEWORK}
     security_opt:
       - seccomp:unconfined
     ports:

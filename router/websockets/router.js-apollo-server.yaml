@@ -1,0 +1,29 @@
+cors:
+  allow_any_origin: true
+supergraph:
+  listen: 0.0.0.0:4040
+  introspection: true
+
+sandbox:
+  enabled: true
+homepage:
+  enabled: false
+include_subgraph_errors:
+  all: true # Propagate errors from all subgraphs
+telemetry:
+  metrics:
+    prometheus:
+      enabled: true
+subscription:
+  mode:
+    passthrough:
+      # docker setup, for local setup comment out the following section
+      subgraphs:
+        reviews:
+          path: /graphql
+
+# For Docker setup, comment out the following section if using local
+override_subgraph_url:
+  products: "http://products:4000/graphql"
+  users: "http://users:4000/graphql"
+  reviews: "http://reviews:4000/graphql"
