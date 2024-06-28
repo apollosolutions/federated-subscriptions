@@ -50,10 +50,11 @@ RUN rm -rf /var/lib/apt/lists/*
 RUN mkdir config schema
 
 ARG SUBS_EXAMPLE
+ARG FRAMEWORK
 
 # Copy configuration for docker image
 # depending on the example
-COPY ${SUBS_EXAMPLE}/router.yaml config
+COPY ${SUBS_EXAMPLE}/router.${FRAMEWORK}.yaml config/router.yaml
 COPY ${SUBS_EXAMPLE}/supergraph.graphql schema
 
 LABEL org.opencontainers.image.authors="Apollo Graph, Inc. https://github.com/apollographql/router"
