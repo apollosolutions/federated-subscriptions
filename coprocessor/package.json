@@ -1,0 +1,20 @@
+{
+  "name": "@apollosolutions/fed-subscriptions-coprocessor",
+  "version": "1.0.0",
+  "description": "A coprocessor used in federated subscriptions",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=dev nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "nodemonConfig": {
+    "ext": "js,json"
+  }
+}

@@ -27,3 +27,14 @@ override_subgraph_url:
   products: "http://products:4000/graphql"
   users: "http://users:4000/graphql"
   reviews: "http://reviews:4000/graphql"
+
+coprocessor:
+  url: http://coprocessor:3000
+  router: # This coprocessor hooks into the `RouterService`
+    request: # By including this key, the `RouterService` sends a coprocessor request whenever it first receives a client request.
+      headers: true # These boolean properties indicate which request data to include in the coprocessor request. All are optional and false by default.
+      body: true
+      context: true
+    response: # By including this key, the `RouterService` sends a coprocessor request whenever it's about to send response data to a client (including incremental data via @defer).
+      headers: true
+      body: false
