@@ -12,7 +12,7 @@ app.post("/", (req, res) => {
     
     if (request['stage'] === 'RouterRequest') {
         // operation_kind isn't available as the operation isn't parsed in this coprocessor stage
-        console.log(JSON.stringify(request, null, 2));
+        // console.log(JSON.stringify(request, null, 2));
     }
 
     const isSubscription = request.context?.entries?.operation_kind === 'subscription';
@@ -20,24 +20,27 @@ app.post("/", (req, res) => {
     if (request['stage'] === 'RouterResponse') {
         if (isSubscription) {
             console.log('Received a subscription event!');
-            console.info('Response Body:', JSON.stringify(request.body, null, 2));
-            console.info('Response Context:', JSON.stringify(request.context, null, 2));
+            
+            // Uncomment to log the request body and context
+            // console.info('Request:', JSON.stringify(request, null, 2));
         }
     }
 
     if (request['stage'] === 'SupergraphRequest') {
         if (isSubscription) {
             console.log('Received a subscription event!');
-            console.info('Response Body:', JSON.stringify(request.body, null, 2));
-            console.info('Response Context:', JSON.stringify(request.context, null, 2));
+           
+            // Uncomment to log the request body and context
+            // console.info('Request:', JSON.stringify(request, null, 2));
         }
     }
 
     if (request['stage'] === 'SupergraphResponse') {
         if (isSubscription) {
             console.log('Received a subscription event!');
-            console.info('Response Body:', JSON.stringify(request.body, null, 2));
-            console.info('Response Context:', JSON.stringify(request.context, null, 2));
+           
+            // Uncomment to log the request body and context
+            // console.info('Request:', JSON.stringify(request, null, 2));
         }
     }
 
