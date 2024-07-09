@@ -37,4 +37,14 @@ coprocessor:
       context: true
     response: # By including this key, the `RouterService` sends a coprocessor request whenever it's about to send response data to a client (including incremental data via @defer).
       headers: true
-      body: false
+      body: true
+      context: true
+  supergraph: # This coprocessor hooks into the `SupergraphService`
+    request: # By including this key, the `SupergraphService` sends a coprocessor request whenever it first receives a client request.
+      headers: true # These boolean properties indicate which request data to include in the coprocessor request. All are optional and false by default.
+      body: true
+      context: true
+    response: # By including this key, the `SupergraphService` sends a coprocessor request whenever it's about to send response data to a client (including incremental data via @defer).
+      headers: true
+      body: true
+      context: true

@@ -1,6 +1,6 @@
 # Federated Subscriptions
 
-This repository provides a end-to-end demo of federated subscriptions with Apollo Federation along with a collection of examples and implementation patterns that can be easily wired into the demo environment.
+This repository provides a end-to-end demo of federated subscriptions with Apollo Federation along with a collection of examples, components, and patterns that can be easily wired into the demo environment.
 
 ```shell
 .
@@ -26,6 +26,8 @@ This repository provides a end-to-end demo of federated subscriptions with Apoll
 │
 ├── router/ # Router files - Dockerfile and configurations per example
 │   └── websockets/ 
+│
+├── coprocessor/
 │
 ├── docker-compose.yaml # Docker compose set up for a full deployment of client, router, subgraphs
 ├── makefile # Commands to simplify usage
