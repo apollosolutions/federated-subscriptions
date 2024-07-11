@@ -45,6 +45,11 @@ coprocessor:
       body: true
       context: true
     response: # By including this key, the `SupergraphService` sends a coprocessor request whenever it's about to send response data to a client (including incremental data via @defer).
+      condition: # This would skip the coprocessor for being hit on every subscription event
+        not:
+          eq:
+          - subscription
+          - operation_kind: string
       headers: true
       body: true
       context: true
