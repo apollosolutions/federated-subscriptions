@@ -11,30 +11,30 @@ services:
     build: ./subgraphs/reviews/${FRAMEWORK}/${SUBS_EXAMPLE}
     ports:
       - "4002:4000"
-      
+
   users:
     container_name: users
     build: ./subgraphs/users
     ports:
       - "4003:4000"
 
-  router:
-    platform: linux/amd64
-    environment:
-      - ENABLE_EXPOSE_QUERY_PLAN_ENV=true
-      - APOLLO_KEY=${APOLLO_KEY}
-      - APOLLO_GRAPH_REF=${APOLLO_GRAPH_REF}
-    build: 
-      context: ./router
-      args:
-        - SUBS_EXAMPLE=${SUBS_EXAMPLE}
-        - FRAMEWORK=${FRAMEWORK}
-    security_opt:
-      - seccomp:unconfined
-    ports:
-      - "4040:4040"
-    volumes:
-      - ./router:/volume
+  # router:
+  #   platform: linux/amd64
+  #   environment:
+  #     - ENABLE_EXPOSE_QUERY_PLAN_ENV=true
+  #     - APOLLO_KEY=${APOLLO_KEY}
+  #     - APOLLO_GRAPH_REF=${APOLLO_GRAPH_REF}
+  #   build:
+  #     context: ./router
+  #     args:
+  #       - SUBS_EXAMPLE=${SUBS_EXAMPLE}
+  #       - FRAMEWORK=${FRAMEWORK}
+  #   security_opt:
+  #     - seccomp:unconfined
+  #   ports:
+  #     - "4040:4040"
+  #   volumes:
+  #     - ./router:/volume
 
   client:
     environment:

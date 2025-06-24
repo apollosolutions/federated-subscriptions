@@ -103,7 +103,7 @@ const server = new ApolloServer({
 await server.start();
 app.use("/graphql", cors(), json(), expressMiddleware(server));
 
-const PORT = 4000;
+const PORT = 4002;
 httpServer.listen(PORT, () => {
   console.log(`🚀 Reviews subgraph ready at http://localhost:${PORT}/`);
 });

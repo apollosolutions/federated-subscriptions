@@ -1,10 +1,15 @@
 extend schema
-  @link(
-    url: "https://specs.apollo.dev/federation/v2.7"
-    import: ["@key"]
-  )
+    @link(url: "https://specs.apollo.dev/federation/v2.7", import: ["@key"])
 
-type User @key(fields:"email") {
-  email: ID!
-  name: String
+type User
+    @key(fields: "email country { a }")
+    @key(fields: "email country { b }") {
+    email: ID!
+    name: String
+    country: Country
+}
+
+type Country @key(fields: "a") {
+    a: String
+    b: String
 }

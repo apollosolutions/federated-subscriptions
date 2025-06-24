@@ -10,20 +10,36 @@ homepage:
   enabled: false
 include_subgraph_errors:
   all: true # Propagate errors from all subgraphs
+headers:
+  all:
+    request:
+      - propagate:
+          named: test
 telemetry:
-  metrics:
-    prometheus:
-      enabled: true
+  exporters:
+    tracing:
+      common:
+        preview_datadog_agent_sampling: true
+      datadog:
+        enabled: true
+    metrics:
+      otlp:
+        enabled: true
+        temporality: delta
+      prometheus:
+        listen: 0.0.0.0:4040
+        enabled: true
+        path: /metrics
 subscription:
+  enable_deduplication: false
   mode:
     passthrough:
       # docker setup, for local setup comment out the following section
       subgraphs:
         reviews:
           path: /graphql
-
 # For Docker setup, comment out the following section if using local
-override_subgraph_url:
-  products: "http://products:4000/graphql"
-  users: "http://users:4000/graphql"
-  reviews: "http://reviews:4000/graphql"
+# override_subgraph_url:
+#   products: "http://products:4000/graphql"
+#   users: "http://users:4000/graphql"
+#   reviews: "http://reviews:4000/graphql"
